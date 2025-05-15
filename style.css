@@ -211,35 +211,47 @@ canvas {
 
 @media screen and (max-width: 768px) {
   .card {
-    width: 90%;
-    height: auto;
-  }
+  width: 95%;
+  padding: 10px;
+  height: auto;
+  flex-direction: column;
+}
 
-  .blackboard {
-    width: 90%;
-    height: auto;
-    margin-left: 0;
-    margin-top: 20px;
-    flex-direction: column;
-  }
+.character {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+}
 
-  .girl {
-    width: 120px;
-    margin-left: 0;
-    left: 0;
-  }
+.girl {
+  position: static;
+  width: 100px;
+  margin: 0 auto 10px auto;
+}
 
-  .card p {
-    font-size: 18px;
-    margin-left: 0;
-    text-align: center;
-  }
+.blackboard {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 10px;
+}
 
-  .plane-wrapper {
-    top: 150px;
-  }
+.card p {
+  font-size: 18px;
+  margin: 10px auto 0 auto;
+  text-align: center;
+  white-space: normal;
+}
+}
+.heart {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
 
-  .plane {
-    width: 60px;
-  }
+.psi {
+  font-size: 22px;
+  color: #7D3C98;
+  font-family: serif;
+}
 }
