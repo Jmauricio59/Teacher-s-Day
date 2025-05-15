@@ -210,48 +210,55 @@ canvas {
 }
 
 @media screen and (max-width: 768px) {
+
   .card {
-  width: 95%;
-  height: auto;
-  padding: 20px 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+    width: 95%;
+    height: auto;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-.blackboard {
-  width: 100%;
-  height: auto;
-  margin: 0 auto 20px auto;
-  padding: 10px;
-  position: relative;
-}
+  .blackboard {
+    width: 100%;
+    height: auto;
+    margin: 0 auto 20px auto;
+    padding: 10px;
+    position: relative;
+  }
 
-.character {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
-}
+  .character {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
 
-.girl {
-  width: 120px;
-  position: relative;
-  bottom: auto;
-  left: auto;
-  margin: 0 auto 10px auto;
-  animation: bounce 2s infinite ease-in-out;
-}
+  .girl {
+    width: 120px;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin: 0 auto 10px auto;
+    animation: bounce 2s infinite ease-in-out;
+  }
 
-.card p {
-  font-size: 18px;
-  margin: 0 auto;
-  text-align: center;
-  white-space: normal;
-  padding: 0 10px;
-}
+  .card p {
+    font-size: 18px;
+    margin: 0 auto;
+    text-align: center;
+    white-space: normal;
+    padding: 0 10px;
+  }
 
-}
+  .plane-wrapper {
+    top: 120px;
+  }
+
+  .plane {
+    width: 50px;
+  }
 .heart {
   display: inline-flex;
   align-items: center;
@@ -262,4 +269,5 @@ canvas {
   font-size: 22px;
   color: #7D3C98;
   font-family: serif;
+}
 }
