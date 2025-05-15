@@ -1,0 +1,245 @@
+body {
+  background-image: url(school-corridor-interior-cartoon-college-hallway-free-vector.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: 'Comic Sans MS', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.blackboard {
+  position: left;
+  margin-left: 380px;
+  width: 630px;
+  height: 330px;
+  background: #2e7d32;
+  border: 7px solid #4e342e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+}
+
+canvas {
+  position: left;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+@keyframes textPop {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.3);
+  border: 5px dashed #f7b731;
+  border-radius: 20px;
+  width: 1000px;
+  height: 500px;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.character {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 20px;
+}
+
+.girl {
+  width: 160px;
+  margin-left: 300px;
+  position: absolute;
+  bottom: -120px;
+  left: 20px;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.girl img {
+  image-rendering: auto;
+}
+
+.card p {
+  font-style: bold;
+  font-size: 22px;
+  margin-left: 590px;
+  color: #34495e;
+  position: under;
+  bottom: 20px;
+  right: 40px;
+  white-space: nowrap;
+}
+
+/* Animación de rebote */
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.heart {
+  display: inline-block;
+  animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.plane-wrapper {
+  position: fixed;
+  top: 200px;
+  left: -100px;
+  width: 100px;
+  height: 100px;
+  animation: flightPath 15s linear forwards infinite;
+  z-index: 10;
+}
+
+.plane {
+  width: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: loopAndFly 3s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes loopAndFly {
+  0% {
+    transform: rotate(-90deg) translateX(180px) rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(90deg) translateX(10px) rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(0deg) translateX(40px) rotate(360deg);
+  }
+}
+
+@keyframes flightPath {
+  0% {
+    transform: translateX(-100px) translateY(-20px);
+  }
+
+  10% {
+    transform: translateX(200px) translateY(10px);
+  }
+
+  20% {
+    transform: translateX(400px) translateY(-10px);
+  }
+
+  30% {
+    transform: translateX(600px) translateY(20px);
+  }
+
+  40% {
+    transform: translateX(800px) translateY(-15px);
+  }
+
+  50% {
+    transform: translateX(1000px) translateY(10px);
+  }
+
+  60% {
+    transform: translateX(1200px) translateY(-10px);
+  }
+
+  70% {
+    transform: translateX(1400px) translateY(15px);
+  }
+
+  80% {
+    transform: translateX(1600px) translateY(-10px);
+  }
+
+  90% {
+    transform: translateX(1800px) translateY(10px);
+  }
+
+  100% {
+    transform: translateX(2000px) translateY(0px);
+  }
+}
+
+.zoom-container {
+  transition: transform 4s ease-in-out;
+  transform: scale(1);
+  transform-origin: 5% 35%;
+}
+
+.zoomed-in {
+  transform: scale(4.5);
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 90%;
+    height: auto;
+  }
+
+  .blackboard {
+    width: 90%;
+    height: auto;
+    margin-left: 0;
+    margin-top: 20px;
+    flex-direction: column;
+  }
+
+  .girl {
+    width: 120px;
+    margin-left: 0;
+    left: 0;
+  }
+
+  .card p {
+    font-size: 18px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .plane-wrapper {
+    top: 150px;
+  }
+
+  .plane {
+    width: 60px;
+  }
+}

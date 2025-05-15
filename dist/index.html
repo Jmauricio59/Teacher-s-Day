@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Teacher´s Day</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <div class="plane-wrapper">
+    <img src="C:\Users\Jaime Mauricio\Downloads\teacher-s-day\teacher-s-day\dist\plane.png" class="plane" alt="avion">
+  </div>
+  <div class="zoom-container zoomed-in">
+    <div class="card">
+      <div class="character">
+        <img src="C:\Users\Jaime Mauricio\Downloads\teacher-s-day\teacher-s-day\dist\IMG\upscalemedia-transformed.png"
+          alt="Niña feliz" class="girl">
+        <div class="blackboard">
+          <canvas id=c></canvas>
+        </div>
+      </div>
+      <strong>
+        <p>Gracias por enseñar con el corazón <span class="heart">💛</span></p>
+      </strong>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const zoomContainer = document.querySelector('.zoom-container');
+
+    // El zoom ya viene aplicado por clase inicial
+    // Solo quitamos el zoom al momento justo
+    setTimeout(() => {
+      zoomContainer.classList.remove('zoomed-in');
+    }, 9500); // 9.5 segundos después
+  });
+</script>
+</html>
