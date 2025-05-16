@@ -1,5 +1,6 @@
 body {
   background-image: url(./school-corridor-interior-cartoon-college-hallway-free-vector.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   font-family: 'Comic Sans MS', sans-serif;
@@ -209,7 +210,7 @@ canvas {
   transform: scale(4.5);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
 
   .card {
     width: 95%;
